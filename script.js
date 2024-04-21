@@ -42,7 +42,7 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".designation-2", {
-    strings: ["Mobile IOS Developer", "Web Developer"],
+    strings: ["Mobile App Developer", "Web Developer"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true,
