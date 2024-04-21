@@ -22,13 +22,19 @@
 
     <script type="text/javascript">
       function sendEmail() {
-        // event.preventDefault
+        event.preventDefault();
         Email.send({
           SecureToken: "66a5bfe7-2598-49c7-b003-0c82fdc9421c",
           To: "sandaruwanb4@gmail.com",
           From: "achitha.portfolio@gmail.com",
-          Subject: "Sending Email using javascript",
-          Body: "Well that was easy!!",
+
+          Subject: `${$('input[name="subject"]').val()}`,
+          Body: `Sender Email: ${$('input[name="sender-email"]').val()}
+
+             Sender Name : ${$('input[name="sender-name"]').val()}
+             
+             Message     : ${$('textarea[name="sender-message"]').val()}
+             `,
         }).then(function (message) {
           alert("mail sent successfully");
         });
@@ -74,7 +80,7 @@
         <h2 class="title">About me</h2>
         <div class="about-content">
           <div class="column left">
-            <img src="images/profile.jpeg" alt="" />
+            <img src="images/profile.jpg" alt="" />
           </div>
           <div class="column right">
             <div class="text">
@@ -90,7 +96,7 @@
               excel at accepting attractive challenges and managing them even
               under stress
             </p>
-            <a href="/cv/Achitha Sandaruwan( Resume ).pdf">Download CV</a>
+            <a href="https://drive.google.com/file/d/1VhbnSmBvo3l09ra5cNEI2XvUPDX579ce/view?usp=sharing">Download CV</a>
           </div>
         </div>
       </div>
@@ -104,14 +110,11 @@
           <div class="column left">
             <div class="text">My creative skills & experiences.</div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos, ratione error est recusandae consequatur, iusto illum
-              deleniti quidem impedit, quos quaerat quis minima sequi.
-              Cupiditate recusandae laudantium esse, harum animi aspernatur
-              quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem
-              illum. Ad delectus natus aut hic explicabo minus quod.
+              I have several skills that I developed when I was in university. I
+              also experienced these skills from the company I currently work
+              for. Although I'm currently working as An IOS developer, I'm
+              practising web development also.
             </p>
-            <a href="#">Read more</a>
           </div>
           <div class="column right">
             <div class="bars">
@@ -178,8 +181,9 @@
               <img src="images/linkedin_clone.png" alt="" />
               <div class="text">Linkedin Clone</div>
               <p>
-                Using React Redux. Fully responsive website with login
-                Functionality
+                Created Using React Redux.Used Firebase Authontication for Login
+                and Registration, Firebase firestore is used for Post
+                functionality
               </p>
             </div>
           </div>
@@ -210,11 +214,7 @@
         <div class="contact-content">
           <div class="column left">
             <div class="text">Get in Touch</div>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos harum corporis fuga corrupti. Doloribus quis soluta
-              nesciunt veritatis vitae nobis?
-            </p>
+            <p>don't hesitate to contact me if you have an idea or issue</p>
             <div class="icons">
               <div class="row">
                 <i class="fas fa-user"></i>
@@ -244,19 +244,35 @@
             <form id="contact-form" onsubmit="sendEmail()">
               <div class="fields">
                 <div class="field name">
-                  <input type="text" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="sender-name"
+                    placeholder="Name"
+                    required
+                  />
                 </div>
                 <div class="field email">
-                  <input type="email" placeholder="Email" required />
+                  <input
+                    type="email"
+                    name="sender-email"
+                    placeholder="Email"
+                    required
+                  />
                 </div>
               </div>
               <div class="field">
-                <input type="text" placeholder="Subject" required />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
               </div>
               <div class="field textarea">
                 <textarea
                   cols="30"
                   rows="10"
+                  name="sender-message"
                   placeholder="Message.."
                   required
                 ></textarea>

@@ -35,19 +35,13 @@ section {
   padding: 0 80px;
   margin: auto;
 }
-.about,
+
 .skills,
 .contact {
   background-color: #222;
 }
 
-.services,
-.projects {
-  background-color: #222;
-}
-
 .about,
-.services,
 .skills,
 .projects,
 .contact,
@@ -55,7 +49,7 @@ footer {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
-.services .serv-content,
+.serv-content,
 .skills .skills-content,
 .contact .contact-content {
   display: flex;
@@ -180,7 +174,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("images/heo.jpg") no-repeat center;
+  background: url("images/hero.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
   min-height: 500px;
@@ -230,13 +224,14 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
+  background-color: #111;
   content: "Who I Am";
 }
 .about .about-content .left {
   width: 45%;
 }
 .about .about-content .left img {
-  height: 400px;
+  height: 460px;
   width: 400px;
   object-fit: cover;
   border-radius: 6px;
@@ -255,7 +250,7 @@ section .title::after {
 }
 .about .about-content .right p {
   color: #fff;
-  text-align: justify;
+  text-align: initial;
 }
 .about .about-content .right a {
   display: inline-block;
@@ -275,18 +270,13 @@ section .title::after {
 }
 
 /* services section styling */
-.services,
+.about,
 .projects {
   color: #fff;
   background: #111;
 }
 
-.services .title::after,
-.projects .title::after {
-  background-color: #111;
-  content: "What I Provide";
-}
-.services .serv-content .card {
+.serv-content .card {
   width: calc(33% - 20px);
   background: #222;
   text-align: center;
@@ -295,24 +285,24 @@ section .title::after {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.services .serv-content .card:hover {
+.serv-content .card:hover {
   background: #7562e0;
 }
-.services .serv-content .card .box {
+.serv-content .card .box {
   transition: all 0.3s ease;
 }
-.services .serv-content .card:hover .box {
+.serv-content .card:hover .box {
   transform: scale(1.05);
 }
-.services .serv-content .card i {
+.serv-content .card i {
   font-size: 50px;
   color: #7562e0;
   transition: color 0.3s ease;
 }
-.services .serv-content .card:hover i {
+.serv-content .card:hover i {
   color: #fff;
 }
-.services .serv-content .card .text {
+.serv-content .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
@@ -333,7 +323,7 @@ section .title::after {
   margin-bottom: 10px;
 }
 .skills .skills-content .left p {
-  text-align: justify;
+  text-align: initial;
   color: #fff;
 }
 .skills .skills-content .left a {
@@ -396,7 +386,6 @@ section .title::after {
   width: 70%;
 }
 
-.about .title::after,
 .skills .title::after,
 .contact .title::after {
   background-color: #222;
@@ -404,6 +393,7 @@ section .title::after {
 
 /* My Projects section styling */
 .projects .title::after {
+  background-color: #111;
   content: "What I Did";
 }
 .projects .carousel .card {
@@ -490,6 +480,11 @@ section .title::after {
   height: 65px;
   align-items: center;
 }
+
+.contact .contact-content .row .fas {
+  width: 25px;
+}
+
 .contact .contact-content .row .info {
   color: #fff;
   margin-left: 30px;
@@ -584,7 +579,7 @@ footer span a:hover {
 /* responsive media query start */
 @media (max-width: 1104px) {
   .about .about-content .left img {
-    height: 350px;
+    height: 400px;
     width: 350px;
   }
 }
@@ -648,7 +643,7 @@ footer span a:hover {
   .about .about-content .right {
     flex: 100%;
   }
-  .services .serv-content .card {
+  .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
@@ -672,7 +667,7 @@ footer span a:hover {
   .home .home-content a {
     font-size: 20px;
   }
-  .services .serv-content .card {
+  .serv-content .card {
     width: 100%;
   }
 }
